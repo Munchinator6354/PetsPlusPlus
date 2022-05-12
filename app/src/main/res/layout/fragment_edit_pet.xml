@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".BlankFragment">
+
+        <EditText
+            android:id="@+id/txt_bday_year"
+            android:layout_width="75dp"
+            android:layout_height="47dp"
+            android:ems="10"
+            android:hint="@string/yyyy"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_birthday"
+            app:layout_constraintStart_toEndOf="@+id/lbl_slash"
+            app:layout_constraintTop_toTopOf="@+id/lbl_birthday"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/txt_bday_day"
+            android:layout_width="75dp"
+            android:layout_height="47dp"
+            android:ems="10"
+            android:hint="@string/dd"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_birthday"
+            app:layout_constraintStart_toEndOf="@+id/lbl_slash1"
+            app:layout_constraintTop_toTopOf="@+id/lbl_birthday"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/lbl_slash"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/slash"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_bday_month"
+            app:layout_constraintStart_toEndOf="@+id/txt_bday_day"
+            app:layout_constraintTop_toTopOf="@+id/txt_bday_month"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/lbl_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/sex"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_breed" />
+
+        <TextView
+            android:id="@+id/lbl_pet_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/pet_type"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_sex" />
+
+        <TextView
+            android:id="@+id/lbl_pet_index_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/pet_index_number"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_replace_photo" />
+
+        <TextView
+            android:id="@+id/lbl_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/birthday"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_pet_type" />
+
+        <EditText
+            android:id="@+id/txt_bday_month"
+            android:layout_width="75dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="@string/mm"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_birthday"
+            app:layout_constraintStart_toEndOf="@+id/lbl_birthday"
+            app:layout_constraintTop_toTopOf="@+id/lbl_birthday"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/lbl_breed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/breed"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_pet_name" />
+
+        <EditText
+            android:id="@+id/edt_pet_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="@string/dog"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_pet_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_pet_type"
+            app:layout_constraintTop_toTopOf="@+id/lbl_pet_type"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck" />
+
+        <ImageButton
+            android:id="@+id/btn_replace_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/replace_your_profile_picture_button"
+            android:src="@drawable/edit_pet_picture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RedundantDescriptionCheck" />
+
+        <EditText
+            android:id="@+id/edt_pet_greeting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/woof_woof"
+            android:inputType="text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_greeting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_greeting"
+            app:layout_constraintTop_toTopOf="@+id/lbl_greeting"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/lbl_pet_index_number_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/_12"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_pet_index_number"
+            app:layout_constraintStart_toEndOf="@+id/lbl_pet_index_number"
+            app:layout_constraintTop_toTopOf="@+id/lbl_pet_index_number" />
+
+        <EditText
+            android:id="@+id/edt_breed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/golden_retriever"
+            android:inputType="text"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_breed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_breed"
+            app:layout_constraintTop_toTopOf="@+id/lbl_breed"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/lbl_available_to_breed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/available_to_breed"
+            android:textSize="20sp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_birthday" />
+
+        <TextView
+            android:id="@+id/lbl_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/greeting"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_available_to_breed" />
+
+        <RadioGroup
+            android:id="@+id/rbtn_available_to_breed"
+            android:layout_width="139dp"
+            android:layout_height="49dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_available_to_breed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lbl_available_to_breed"
+            app:layout_constraintTop_toTopOf="@+id/lbl_available_to_breed">
+
+            <RadioButton
+                android:id="@+id/rbtn_yes"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+
+                android:checked="false"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/rbtn_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/save_changes"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_greeting" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/light_gray"
+            android:text="@string/cancel_changes"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_save" />
+
+        <RadioGroup
+            android:id="@+id/rbtn_pet_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/lbl_sex"
+            app:layout_constraintStart_toEndOf="@+id/lbl_sex"
+            app:layout_constraintTop_toTopOf="@+id/lbl_sex">
+
+            <RadioButton
+                android:id="@+id/rbtn_male"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="@string/male"
+                android:textAlignment="viewStart"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/rbtn_female"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/female" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/lbl_slash1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            android:text="@string/slash"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_bday_month"
+            app:layout_constraintStart_toEndOf="@+id/txt_bday_month"
+            app:layout_constraintTop_toTopOf="@+id/txt_bday_month" />
+
+        <TextView
+            android:id="@+id/txt_pet_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/pet_name"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_pet_index_number" />
+
+        <EditText
+            android:id="@+id/edt_pet_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:hint="@string/scout"
+            android:inputType="text"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_pet_name"
+            app:layout_constraintStart_toEndOf="@+id/txt_pet_name"
+            app:layout_constraintTop_toTopOf="@+id/txt_pet_name"
+            android:importantForAutofill="no" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

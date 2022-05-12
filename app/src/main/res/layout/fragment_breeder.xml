@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:backgroundTint="#FFFFFF"
+    android:visibility="visible"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="40dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_pet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/quot_user_s_profile_picture_quot"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/man_1" />
+
+        <TextView
+            android:id="@+id/txt_address_street"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/img_pet"
+            app:layout_constraintTop_toBottomOf="@+id/txt_contact_email"
+            tools:text="Address Street Name" />
+
+        <TextView
+            android:id="@+id/txt_address_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txt_address_street"
+            app:layout_constraintTop_toBottomOf="@+id/txt_address_street"
+            tools:text="Address City" />
+
+        <TextView
+            android:id="@+id/txt_address_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txt_address_city"
+            app:layout_constraintTop_toTopOf="@+id/txt_address_city"
+            tools:text="State" />
+
+        <TextView
+            android:id="@+id/txt_address_zip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txt_address_state"
+            app:layout_constraintTop_toTopOf="@+id/txt_address_city"
+            tools:text="Zip Code" />
+
+        <TextView
+            android:id="@+id/txt_num_pets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/img_pet"
+            app:layout_constraintStart_toStartOf="@+id/img_pet"
+            app:layout_constraintTop_toBottomOf="@+id/img_pet"
+            tools:text="Pets: 42" />
+
+        <TextView
+            android:id="@+id/txt_contact_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/Primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txt_first_name_display"
+            app:layout_constraintTop_toBottomOf="@+id/txt_first_name_display"
+            tools:ignore="TextContrastCheck"
+            tools:text="Email Address" />
+
+        <Button
+            android:id="@+id/btn_edit_breeder"
+            android:layout_width="95dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/edit_breeder"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txt_num_pets"
+            app:layout_constraintStart_toStartOf="@+id/txt_num_pets"
+            app:layout_constraintTop_toBottomOf="@+id/txt_num_pets"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/txt_breeder_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/purple_500"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txt_address_city"
+            app:layout_constraintTop_toBottomOf="@+id/txt_address_city"
+            tools:text="Breeder greeting" />
+
+        <TextView
+            android:id="@+id/txt_first_name_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/img_pet"
+            app:layout_constraintTop_toTopOf="@+id/img_pet"
+            tools:text="First name" />
+
+        <TextView
+            android:id="@+id/txt_last_name_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txt_first_name_display"
+            app:layout_constraintTop_toTopOf="@+id/txt_first_name_display"
+            tools:text="Last name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/breederListingPage">
+    <fragment
+        android:id="@+id/breederListingPage"
+        android:name="cs240.osburnj.pets.ui.BreederListFragment"
+        android:label="@string/breeder_listing_page"
+        tools:layout="@layout/fragment_breeder_list" >
+        <action
+            android:id="@+id/action_breederListingPage_to_petListFragment"
+            app:destination="@id/petListFragment" />
+        <action
+            android:id="@+id/action_breederListingPage_to_editBreederFragment"
+            app:destination="@id/editBreederFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/petListFragment"
+        android:name="cs240.osburnj.pets.ui.PetListFragment"
+        android:label="PetListFragment" >
+        <action
+            android:id="@+id/action_petListFragment_to_breederListingPage"
+            app:destination="@id/breederListingPage"
+            app:popUpTo="@id/breederListingPage"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="index"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_petListFragment_to_editPetFragment"
+            app:destination="@id/editPetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editBreederFragment"
+        android:name="cs240.osburnj.pets.ui.EditBreederFragment"
+        android:label="fragment_edit_breeder"
+        tools:layout="@layout/fragment_edit_breeder" >
+        <action
+            android:id="@+id/action_editBreederFragment_to_breederListingPage"
+            app:destination="@id/breederListingPage"
+            app:popUpTo="@id/breederListingPage"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="index"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPetFragment"
+        android:name="cs240.osburnj.pets.ui.EditPetFragment"
+        android:label="EditPetFragment" >
+        <action
+            android:id="@+id/action_editPetFragment_to_petListFragment"
+            app:destination="@id/petListFragment"
+            app:popUpTo="@id/petListFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="index"
+            app:argType="integer" />
+        <argument
+            android:name="petIndex"
+            app:argType="integer" />
+    </fragment>
+</navigation>

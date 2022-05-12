@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#FFFFFF"
+    android:layout_margin="8dp"
+    app:cardElevation="40dp"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_animal_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10sp"
+            android:textColor="@color/design_default_color_secondary_variant"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/img_pet"
+            app:layout_constraintTop_toBottomOf="@+id/txt_pet_name_display"
+            tools:text="Animal Type" />
+
+        <TextView
+            android:id="@+id/txt_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#009688"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/img_pet"
+            app:layout_constraintHorizontal_bias="0.459"
+            app:layout_constraintStart_toStartOf="@+id/img_pet"
+            app:layout_constraintTop_toBottomOf="@+id/img_pet"
+            tools:text="Sex" />
+
+        <TextView
+            android:id="@+id/txt_pet_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#009688"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txt_animal_type"
+            app:layout_constraintTop_toBottomOf="@+id/txt_animal_type"
+            tools:text="This is the pet greeting" />
+
+        <ImageView
+            android:id="@+id/img_pet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/quot_profile_picture_of_a_pet_quot"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/scout" />
+
+        <TextView
+            android:id="@+id/txt_available_to_breed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/img_pet"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="@+id/img_pet"
+            app:layout_constraintTop_toBottomOf="@+id/txt_sex"
+            tools:text="True/False" />
+
+        <TextView
+            android:id="@+id/txt_pet_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text=""
+            android:textColor="@color/Primary"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_pet_name_display"
+            app:layout_constraintStart_toEndOf="@+id/txt_pet_name_display"
+            tools:ignore="TextContrastCheck"
+            tools:text="X years old" />
+
+        <TextView
+            android:id="@+id/txt_pet_name_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toEndOf="@+id/img_pet"
+            app:layout_constraintTop_toTopOf="@+id/img_pet"
+            tools:text="Pet Name" />
+
+        <TextView
+            android:id="@+id/txt_breed_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/teal_700"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_animal_type"
+            app:layout_constraintStart_toEndOf="@+id/txt_animal_type"
+            app:layout_constraintTop_toTopOf="@+id/txt_animal_type"
+            tools:text="Breed" />
+
+
+        <LinearLayout
+            android:id="@+id/layout_pet_buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_available_to_breed">
+
+            <Button
+                android:id="@+id/btn_edit_pet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:text="@string/edit_pet"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_available_to_breed"
+                tools:ignore="ButtonStyle,TextContrastCheck" />
+
+            <Button
+                android:id="@+id/btn_delete_pet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:text="@string/delete_pet"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="ButtonStyle,TextContrastCheck" />
+
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

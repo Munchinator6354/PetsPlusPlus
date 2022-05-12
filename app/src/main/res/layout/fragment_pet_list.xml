@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.PetListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_pets"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:navGraph="@navigation/nav_graph"
+        app:defaultNavHost="false"/>
+
+<!--We purposefully left the fab icon as the doge_icon, because we like it. Even though it would make
+more sense for a plus symbol.-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_pet_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/add_pet"
+        android:src="@drawable/doge_icon"
+        android:visibility="invisible" />
+
+</FrameLayout>
