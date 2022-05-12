@@ -5,19 +5,19 @@ An application for animal breeders and animal lovers to connect! Simply create a
 ## What the App Looks Like:
 To sign into the application you will just need to input an email address of your choosing to create an account, otherwise use a pre-existing email:
 
-<img src="readMeGifs/petsSignBackIn.gif" width="800" height="400"/>
+<img src="readMeGifs/petsSignBackIn.gif" width="900" height="450"/>
 
 Once you are logged in you can see your account tile because it has the orange "Edit Breeder" button. You can edit your tile information by clicking this button.
 
-<img src="readMeGifs/petsEditBreeder.gif" width="800" height="400"/>
+<img src="readMeGifs/petsEditBreeder.gif" width="900" height="450"/>
 
 Once you have edited your Breeder information you can then add a pet to your collection:
 
-<img src="readMeGifs/petsCreateAPet.gif" width="800" height="400"/>
+<img src="readMeGifs/petsCreateAPet.gif" width="900" height="450"/>
 
 Note that when viewing other breeders (users), their tiles will only display their pets and pertaining information.
 
-<img src="readMeGifs/petsLookingAtOtherBreedersPets.gif" width="800" height="400"/>
+<img src="readMeGifs/petsLookingAtOtherBreedersPets.gif" width="900" height="450"/>
 
 ## Technologies Used:
 Written in Kotlin.
