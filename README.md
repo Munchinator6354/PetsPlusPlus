@@ -26,5 +26,4 @@ This was both author's first project using Android Studio.
 
 ## Authors:
 https://github.com/Munchinator6354 - Ryan Isaacson  
-https://github.com/Ilcaelum - Jim Osburn 
-https://github.com/Weegee847 - Chidera Mbara  
+https://github.com/jim-sudo - Jim Osburn 
