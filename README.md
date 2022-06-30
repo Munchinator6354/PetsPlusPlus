@@ -2,7 +2,7 @@
 ## Introduction:
 An application for animal breeders and animal lovers to connect! Simply create an account to login and begin editing your own information as a potential breeder. Once your credentials are how you want them, add new pets to your collection so that you can share their information with the world!
 
-<img src="readMeGifs/primaryPetImage.png" width="1000" height="500"/>
+<img src="readMeGifs/primaryAppImage.png" width="1000" height="500"/>
 
 ## What the App Looks Like:
 To sign into the application you will just need to input an email address of your choosing to create an account, otherwise use a pre-existing email:
