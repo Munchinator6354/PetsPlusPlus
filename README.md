@@ -7,7 +7,7 @@ An application for animal breeders and animal lovers to connect! Simply create a
 ## What the App Looks Like:
 To sign into the application you will just need to input an email address of your choosing to create an account, otherwise use a pre-existing email:
 
-<img src="readMeGifs/petsSignBackIn.gif" width="1000" height="500"/>
+<img src="readMeGifs/petsSignBackIn.gif" width="500" height="500"/>
 
 Once you are logged in you can see your account tile because it has the orange "Edit Breeder" button. You can edit your tile information by clicking this button.
 
